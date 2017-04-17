@@ -2,12 +2,17 @@
 
 {% block content %}
     <form method = "post">
-        <label><strong>Subject:</strong></label>
-        <input = "text" name = "blog-title"/>
-        <br>
-        <input = "text-area" name = "blog-text"
-        <br>"
-        <input type = "submit" value = "Submit Entry"
+        <label>
+            <div>Title:</div>
+            <input type = "text" name = "title" value = "{{title}}">
+        </label>
+        <label>
+            <div>Blog:</div>
+            <textarea name = "blog">{{blog}}</textarea>
+        </label>
+
+        <div class = "error">{{error}}</div><br>
+        <input type = "submit" value = "Submit Blog" >
     </form>
 
 {% endblock %}
